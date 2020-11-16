@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Locate the user</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+<script src='https://unpkg.com/@turf/turf/turf.min.js'></script>
+<style>
+	body { margin: 0; padding: 0; }
+	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+	// TO MAKE THE MAP APPEAR YOU MUST
+	// ADD YOUR ACCESS TOKEN FROM
+	// https://account.mapbox.com
+	mapboxgl.accessToken = 'pk.eyJ1IjoiZGhhbHBlcm4iLCJhIjoiY2p3MHFvZHg2MDcyczQ4bXBjNW85aDh2OCJ9.OUluk6vAGe5BVXLOiGIoQQ';
+    var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: 'mapbox://styles/mapbox/satellite-v9',
+        center: [-87.627275, 41.8332147], // starting position
+        zoom: 18 // starting zoom
+    });
+
+    const features = [
+        {
+            'type': 'Feature',
+            'properties': {
+                'title': 'Marker1',
+                'description': '<strong>Marker 1 Make it Mount Pleasant</strong><p><a href="http://www.mtpleasantdc.com/makeitmtpleasant" target="_blank" title="Opens in a new window">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>',
+                'audioFile': './assets/audio/track1.mp3',
+                'mapMarker': './assets/images/historyMarker.jpg'
+            },
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [-87.627275, 41.8332147]
+            }
+        },
+        
+        {
+            'type': 'Feature',
+            'properties': {
+                'title': 'Marker2',
+                'description': '<strong>Make it Mount Pleasant</strong><p><a href="http://www.mtpleasantdc.com/makeitmtpleasant" target="_blank" title="Opens in a new window">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>',
+            },
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [-87.62730293493989, 41.83007375001503]
+            }
+        },
+    ]
+
+    const bufferedFeatures = features.map(i => turf.circle(turf.point(i.geometry.coordinates), 500, {units: 'feet'}))
+
+    function checkProximity(coords){
+
+        let clickedPt = turf.point([coords[0], coords[1]]);
+        for (let i=0; i<bufferedFeatures.length; ++i) {
+            if (turf.booleanWithin(clickedPt, bufferedFeatures[i])){
+                console.log(features[i].properties.title)
+                console.log(features[i].properties.description)
+                break
+            }
+        }
+    }
+
+    map.on("load", function(){
+        map.addSource("markers", {
+            "type":"geojson",
+            "data": {
+                "type":"FeatureCollection",
+                "features": features
+            }
+        })
+        
+        // Add a layer showing the places.
+        map.addLayer({
+            'id': 'markers',
+            'type': 'symbol',
+            'source': 'markers',
+            'layout': {
+            // get the title name from the source's "title" property
+            'text-field': ['get', 'title'],
+                'text-font': [
+                'Open Sans Semibold',
+                'Arial Unicode MS Bold'
+                ],
+            'text-anchor': 'top',
+            },
+            paint: {
+                'text-color': 'rgb(255,0,0)'
+            }
+        });
+
+    })
+
+
+    // Add geolocate control to the map.
+    var geolocate = new mapboxgl.GeolocateControl({
+        positionOptions: {
+            enableHighAccuracy: true
+        },
+        trackUserLocation: true
+    });
+    
+    // Add the control to the map.
+    map.addControl(geolocate);
+
+    // Set an event listener that fires
+    // when a geolocate event occurs.
+    geolocate.on('geolocate', function(e) {
+        checkProximity([e.coords.longitude,e.coords.latitude])
+        console.log(e.coords.heading)
+    });
+
+    map.on('click', function (e) {
+        console.log(e)
+        checkProximity([e.lngLat.lng,e.lngLat.lat])
+    })
+
+</script>
+
+</body>
+</html>
