@@ -18,10 +18,10 @@ const features = [
             'title': 'One', 
             // full text description
             'description': `
-                <strong>This is a Subheader</strong><p>
+                <strong>collapse/Construction</strong><p>
                 this is placeholder text placeholder text placeholder text</p>`,
             // audio track
-            'audioFile': './assets/audio/sample.mp3',
+            'audioFile': './assets/audio/Marker1History.mp3',
             // marker image if using
             'mapMarker': './assets/markers/marker1.png',
             // 360 image
@@ -29,23 +29,23 @@ const features = [
             // pano 360 links/text
             'hotSpots': [
                     {
-                        "pitch": 14.1,
-                        "yaw": 1.5,
-                        "type": "info",
-                        "text": "Baltimore Museum of Art",
-                        "URL": "https://artbma.org/",
-                    },
-                    {
-                        "pitch": -9.4,
-                        "yaw": 222.6,
-                        "type": "info",
-                        "text": "Art Museum Drive"
-                    },
-                    {
-                        "pitch": -0.9,
-                        "yaw": 144.4,
-                        "type": "info",
-                        "text": "North Charles Street"
+                    //     "pitch": 14.1,
+                    //     "yaw": 1.5,
+                    //     "type": "info",
+                    //     "text": "Baltimore Museum of Art",
+                    //     "URL": "https://artbma.org/",
+                    // },
+                    // {
+                    //     "pitch": -9.4,
+                    //     "yaw": 222.6,
+                    //     "type": "info",
+                    //     "text": "Art Museum Drive"
+                    // },
+                    // {
+                    //     "pitch": -0.9,
+                    //     "yaw": 144.4,
+                    //     "type": "info",
+                    //     "text": "North Charles Street"
                     }
                 ]
         },
