@@ -19,7 +19,7 @@ const features = [
             // full text description
             'description': `
                 <strong>collapse/Construction</strong><p>
-                this is placeholder text placeholder text placeholder text</p>`,
+                Learn about the history of the Mecca, the people who lived there, and how it intersects with the history of IIT. </p>`,
             // audio track
             'audioFile': './assets/audio/Marker1History.mp3',
             // marker image if using
@@ -28,7 +28,7 @@ const features = [
             'pano360': './assets/360/SAM_100_1137.jpg',
             // pano 360 links/text
             'hotSpots': [
-                    {
+                    // {
                     //     "pitch": 14.1,
                     //     "yaw": 1.5,
                     //     "type": "info",
@@ -46,7 +46,7 @@ const features = [
                     //     "yaw": 144.4,
                     //     "type": "info",
                     //     "text": "North Charles Street"
-                    }
+                    // }
                 ]
         },
         // the location on the map
@@ -61,8 +61,8 @@ const features = [
         'properties': { 
             'title': 'Two', 
             'description': `
-                <strong>This is a Subheader</strong><p>
-                this is placeholder text placeholder text placeholder text</p>`,
+                <strong>Surveillance/Sousveillance</strong><p>
+                Through Simone Browne's <i>Dark Matters: on the Surveillance of Blackness,</i> we will consider the architectural rhymes, assonances, and dissonances of surveillance between the Mecca and the buildings that occupy the site today. </p>`,
             'audioFile': './assets/audio/sample.mp3',
             'mapMarker': './assets/markers/marker2.png',
             'pano360': './assets/360/SAM_100_1140.jpg',
@@ -99,8 +99,8 @@ const features = [
         'properties': { 
             'title': 'Three', 
             'description': `
-                <strong>This is a Subheader</strong><p>
-                this is placeholder text placeholder text placeholder text</p>`,
+                <strong>Archive/Archaeology</strong><p>
+                How do you discuss the history of site when all that is left are tiles and poetry?</p>`,
             'audioFile': './assets/audio/sample.mp3',
             'mapMarker': './assets/markers/marker3.png',
             'pano360': './assets/360/SAM_100_1157.jpg',
@@ -137,8 +137,8 @@ const features = [
         'properties': { 
             'title': 'Four', 
             'description': `
-                <strong>This is a Subheader</strong><p>
-                this is placeholder text placeholder text placeholder text</p>`,
+                <strong>walking/Promenading</strong><p>
+                From what was once the back left corner of the Mecca, we consider Garnette Cadogan's "Walking While Black" along balconies and sidewalks. </p>`,
             'audioFile': './assets/audio/sample.mp3',
             'mapMarker': './assets/markers/marker4.png',
             'pano360': './assets/360/SAM_100_1151.jpg',
@@ -175,8 +175,8 @@ const features = [
         'properties': {
             'title': 'Five', 
             'description': `
-                <strong>This is a Subheader</strong><p>
-                this is placeholder text placeholder text placeholder text</p>`,
+                <strong>Let's Discuss</strong><p>
+                Questions for further reflection.</p>`,
             'audioFile': './assets/audio/sample.mp3',
             'mapMarker': './assets/markers/marker5.png',
             'pano360': './assets/360/SAM_100_1136.jpg',
@@ -218,7 +218,7 @@ function checkProximity(coords){
             if (turf.booleanWithin(clickedPt, bufferedFeatures[i])){
                 document.querySelector("#map-content-title").innerText = features[i].properties.title
                 document.querySelector("#map-content-description").innerHTML = features[i].properties.description
-                document.querySelector("#map-audio-content").src = features[i].properties.audioFile
+                document.querySelector("#map-audio-player").src = features[i].properties.audioFile
                 document.querySelector("#map-content").classList += ' active'
                 
                 if (window.location.href.includes("click")) {
