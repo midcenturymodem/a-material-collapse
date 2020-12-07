@@ -59,12 +59,12 @@ const features = [
     // start of feature
     { 'type': 'Feature',
         'properties': { 
-            'title': 'Two', 
+            'title': 'Three', 
             'description': `
                 <strong>Surveillance/Sousveillance</strong><p>
                 Through Simone Browne's <i>Dark Matters: on the Surveillance of Blackness,</i> we will consider the architectural rhymes, assonances, and dissonances of surveillance between the Mecca and the buildings that occupy the site today. </p>`,
             'audioFile': './assets/audio/sample.mp3',
-            'mapMarker': './assets/markers/marker2.png',
+            'mapMarker': './assets/markers/marker3.png',
             'pano360': './assets/360/SAM_100_1140.jpg',
             'hotSpots': [
                     // {
@@ -90,19 +90,19 @@ const features = [
         },
         'geometry': { 
             'type': 'Point',
-            'coordinates': [-87.627262, 41.832983]
+            'coordinates': [-87.627292, 41.8334420]
         }
     },
    
     // start of feature
     {'type': 'Feature',
         'properties': { 
-            'title': 'Three', 
+            'title': 'Two', 
             'description': `
                 <strong>Archive/Archaeology</strong><p>
                 How do you discuss the history of site when all that is left are tiles and poetry?</p>`,
             'audioFile': './assets/audio/sample.mp3',
-            'mapMarker': './assets/markers/marker3.png',
+            'mapMarker': './assets/markers/marker2.png',
             'pano360': './assets/360/SAM_100_1157.jpg',
             'hotSpots': [
                     // {
@@ -299,7 +299,7 @@ map.on("load", function(){
 if (window.location.href.includes("click")) {
     map.on('click', function (e) {
         checkProximity([e.lngLat.lng,e.lngLat.lat])
-        // console.log([e.lngLat.lng,e.lngLat.lat])
+        console.log([e.lngLat.lng,e.lngLat.lat])
     })
 } else {
     // Add geolocate control to the map.
