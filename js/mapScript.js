@@ -138,7 +138,7 @@ const features = [
             'title': 'Four', 
             'description': `
                 <strong>walking/Promenading</strong><p>
-                From what was once the back left corner of the Mecca, we consider Garnette Cadogan's "Walking While Black" along balconies and sidewalks. </p>`,
+                From what was once the back left corner of the Mecca, we consider Garnette Cadogan's "Walking While Black" along balconies and sidewalks. <p>“So I walk caught between memory and forgetting, between memory and forgiveness.”</p></p>`,
             'audioFile': './assets/audio/sample.mp3',
             'mapMarker': './assets/markers/marker4.png',
             'pano360': './assets/360/SAM_100_1151.jpg',
