@@ -55,44 +55,6 @@ const features = [
             'coordinates': [-87.626666667, 41.832777778]
         }
     }, // end of feature
-    
-    // start of feature
-    { 'type': 'Feature',
-        'properties': { 
-            'title': 'Three', 
-            'description': `
-                <strong>Surveillance/Sousveillance</strong><p>
-                Through Simone Browne's <i>Dark Matters: on the Surveillance of Blackness,</i> we will consider the architectural rhymes, assonances, and dissonances of surveillance between the Mecca and the buildings that occupy the site today. </p>`,
-            'audioFile': './assets/audio/sample.mp3',
-            'mapMarker': './assets/markers/marker3.png',
-            'pano360': './assets/360/SAM_100_1140.jpg',
-            'hotSpots': [
-                    // {
-                    //     "pitch": 14.1,
-                    //     "yaw": 1.5,
-                    //     "type": "info",
-                    //     "text": "Baltimore Museum of Art",
-                    //     "URL": "https://artbma.org/",
-                    // },
-                    // {
-                    //     "pitch": -9.4,
-                    //     "yaw": 222.6,
-                    //     "type": "info",
-                    //     "text": "Art Museum Drive"
-                    // },
-                    // {
-                    //     "pitch": -0.9,
-                    //     "yaw": 144.4,
-                    //     "type": "info",
-                    //     "text": "North Charles Street"
-                    // }
-                ]
-        },
-        'geometry': { 
-            'type': 'Point',
-            'coordinates': [-87.627292, 41.8334420]
-        }
-    },
    
     // start of feature
     {'type': 'Feature',
@@ -132,6 +94,44 @@ const features = [
         }
     },
     
+    
+    // start of feature
+    { 'type': 'Feature',
+        'properties': { 
+            'title': 'Three', 
+            'description': `
+                <strong>Surveillance/Sousveillance</strong><p>
+                Through Simone Browne's <i>Dark Matters: on the Surveillance of Blackness,</i> we will consider the architectural rhymes, assonances, and dissonances of surveillance between the Mecca and the buildings that occupy the site today. </p>`,
+            'audioFile': './assets/audio/sample.mp3',
+            'mapMarker': './assets/markers/marker3.png',
+            'pano360': './assets/360/SAM_100_1149.jpg',
+            'hotSpots': [
+                    // {
+                    //     "pitch": 14.1,
+                    //     "yaw": 1.5,
+                    //     "type": "info",
+                    //     "text": "Baltimore Museum of Art",
+                    //     "URL": "https://artbma.org/",
+                    // },
+                    // {
+                    //     "pitch": -9.4,
+                    //     "yaw": 222.6,
+                    //     "type": "info",
+                    //     "text": "Art Museum Drive"
+                    // },
+                    // {
+                    //     "pitch": -0.9,
+                    //     "yaw": 144.4,
+                    //     "type": "info",
+                    //     "text": "North Charles Street"
+                    // }
+                ]
+        },
+        'geometry': { 
+            'type': 'Point',
+            'coordinates': [-87.627292, 41.8334420]
+        }
+    },
     // start of feature
     { 'type': 'Feature',
         'properties': { 
