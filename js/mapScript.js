@@ -21,7 +21,7 @@ const features = [
                 <strong>collapse/Construction</strong><p>
                 Learn about the history of the Mecca, the people who lived there, and how it intersects with the history of IIT. </p>`,
             // audio track
-            'audioFile': './assets/audio/Marker1History.mp3',
+            'audioFile': './assets/audio/Marker1FINAL.mp3',
             // marker image if using
             'mapMarker': './assets/markers/marker1.png',
             // 360 image
@@ -63,7 +63,7 @@ const features = [
             'description': `
                 <strong>Surveillance/Sousveillance</strong><p>
                 Through Simone Browne's <i>Dark Matters: on the Surveillance of Blackness,</i> we will consider the architectural rhymes, assonances, and dissonances of surveillance between the Mecca and the buildings that occupy the site today. </p>`,
-            'audioFile': './assets/audio/sample.mp3',
+            'audioFile': './assets/audio/Marker2FINAL.mp3',
             'mapMarker': './assets/markers/marker2.png',
             'pano360': './assets/360/SAM_100_1140.jpg',
             'hotSpots': [
@@ -101,7 +101,7 @@ const features = [
             'description': `
                 <strong>Archive/Archaeology</strong><p>
                 How do you discuss the history of site when all that is left are tiles and poetry?</p>`,
-            'audioFile': './assets/audio/sample.mp3',
+            'audioFile': './assets/audio/Marker3FINAL.mp3',
             'mapMarker': './assets/markers/marker3.png',
             'pano360': './assets/360/SAM_100_1157.jpg',
             'hotSpots': [
@@ -139,7 +139,7 @@ const features = [
             'description': `
                 <strong>walking/Promenading</strong><p>
                 From what was once the back left corner of the Mecca, we consider Garnette Cadogan's "Walking While Black" along balconies and sidewalks. <p>“So I walk caught between memory and forgetting, between memory and forgiveness.”</p></p>`,
-            'audioFile': './assets/audio/sample.mp3',
+            'audioFile': './assets/audio/Marker4FINAL.mp3',
             'mapMarker': './assets/markers/marker4.png',
             'pano360': './assets/360/SAM_100_1151.jpg',
             'hotSpots': [
