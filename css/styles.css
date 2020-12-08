@@ -10129,6 +10129,15 @@ header.masthead h1 {
   max-width:90vw;
   margin:0 auto;
 }
+
+img.sideBySideImg {
+  display:inline;
+  width:100%;
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
 @media (min-width: 992px) {
   header.masthead {
     height: 100vh;
