@@ -173,6 +173,7 @@ const features = [
     // start of feature
     {'type': 'Feature',
         'properties': {
+            'type': 'discussion',
             'title': 'Five', 
             'description': `
                 <strong>Let's Discuss</strong><p>
@@ -223,7 +224,11 @@ function checkProximity(coords){
                 document.querySelector("#map-content-description").innerHTML = features[i].properties.description
                 document.querySelector("#map-audio-player").src = features[i].properties.audioFile
                 document.querySelector("#map-content").classList += ' active'
-                
+                if (features[i].properties.type === 'discussion') {
+                    document.querySelector("#map-audio-player").style.display = 'none'
+                } else {
+                    document.querySelector("#map-audio-player").style.display = 'initial'
+                }
                 if (window.location.href.includes("click")) {
                     pannellum.viewer('photo-viewer', {
                         "type": "equirectangular",
