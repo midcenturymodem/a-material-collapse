@@ -62,7 +62,7 @@ const features = [
             'title': 'Two', 
             'description': `
             <strong>Archive/Archaeology</strong><p>
-            How do you discuss the history of site when what's left are tiles, poetry, and headlines?</p>`,   
+            How do you discuss the history of a site when what's left are tiles, poetry, and headlines?</p>`,   
             'audioFile': './assets/audio/Marker2FINAL.mp3',
             'mapMarker': './assets/markers/marker2.png',
             'pano360': './assets/360/SAM_100_1157.jpg',
@@ -101,7 +101,7 @@ const features = [
             'title': 'Three', 
             'description': `
             <strong>Surveillance/Sousveillance</strong><p>
-            Thinking through the panopticon and the panorama, we consider the architectural rhymes, assonances, and dissonances of surveillance between the Mecca and the buildings that occupy the site today. </p>`,
+            Thinking through the panopticon and the panorama, we consider the architectural rhymes, assonances, and dissonances of surveillance between the Mecca and Crown Hall</p>`,
             'audioFile': './assets/audio/Marker3FINAL.mp3',
             'mapMarker': './assets/markers/marker3.png',
             'pano360': './assets/360/SAM_100_1149.jpg',
@@ -176,8 +176,11 @@ const features = [
             'title': 'Five', 
             'description': `
                 <strong>Let's Discuss</strong><p>
-                Questions for further reflection.</p>`,
-            'audioFile': './assets/audio/sample.mp3',
+                1.
+                2.
+                3.
+                4. </p>`,
+            // 'audioFile': './assets/audio/sample.mp3',
             'mapMarker': './assets/markers/marker5.png',
             'pano360': './assets/360/SAM_100_1136.jpg',
             'hotSpots': [
