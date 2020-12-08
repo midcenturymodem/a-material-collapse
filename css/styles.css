@@ -67,6 +67,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
+  overflow-x:hidden;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -10124,7 +10125,8 @@ header.masthead h1 {
   font-size: 2.25rem;
 }
 #hero-logo {
-  max-width:800px;
+  width:800px;
+  max-width:90vw;
   margin:0 auto;
 }
 @media (min-width: 992px) {
