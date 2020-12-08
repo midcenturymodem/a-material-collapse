@@ -137,8 +137,8 @@ const features = [
         'properties': { 
             'title': 'Four', 
             'description': `
-                <strong>walking/Promenading</strong><p>
-                Taking a step outside of the Mecca, we consider the right to the city as the Mecca's block began to change. Garnette Cadogan's "Walking While Black" features. <p>“So I walk caught between memory and forgetting, between memory and forgiveness.”</p></p>`,
+                <strong>walking/Promenading</strong>
+                <p> Taking a step outside of the Mecca, we consider the right to the city as the Mecca's block began to change. Garnette Cadogan's "Walking While Black" features. <p>“So I walk caught between memory and forgetting, between memory and forgiveness.”</p></p>`,
             'audioFile': './assets/audio/Marker4FINAL.mp3',
             'mapMarker': './assets/markers/marker4.png',
             'pano360': './assets/360/SAM_100_1151.jpg',
@@ -177,10 +177,10 @@ const features = [
             'title': 'Five', 
             'description': `
                 <strong>Let's Discuss</strong><p>
-                1.
-                2.
-                3.
-                4. </p>`,
+                <p>1. What other sites like the Mecca are you familiar with? What used to be there, and what is at the site now? </p> 
+                <p>2. If you could design an exhibition on the objects found from the Mecca, how would you disply them? What kinds of information would you include with the objects? </p>
+                <p>3. How does it feel to observe and be observed in the city? When are you most aware of either? </P>
+                <p>4. What other parts of the Mecca's history are still present with us today? </p>`,
             // 'audioFile': './assets/audio/sample.mp3',
             'mapMarker': './assets/markers/marker5.png',
             'pano360': './assets/360/SAM_100_1136.jpg',
