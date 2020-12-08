@@ -61,8 +61,8 @@ const features = [
         'properties': { 
             'title': 'Two', 
             'description': `
-                <strong>Surveillance/Sousveillance</strong><p>
-                Through Simone Browne's <i>Dark Matters: on the Surveillance of Blackness,</i> we will consider the architectural rhymes, assonances, and dissonances of surveillance between the Mecca and the buildings that occupy the site today. </p>`,
+            <strong>Archive/Archaeology</strong><p>
+            How do you discuss the history of site when what's left are tiles, poetry, and headlines?</p>`,   
             'audioFile': './assets/audio/Marker2FINAL.mp3',
             'mapMarker': './assets/markers/marker2.png',
             'pano360': './assets/360/SAM_100_1157.jpg',
@@ -100,8 +100,8 @@ const features = [
         'properties': { 
             'title': 'Three', 
             'description': `
-                <strong>Archive/Archaeology</strong><p>
-                How do you discuss the history of site when all that is left are tiles and poetry?</p>`,
+            <strong>Surveillance/Sousveillance</strong><p>
+            Thinking through the panopticon and the panorama, we consider the architectural rhymes, assonances, and dissonances of surveillance between the Mecca and the buildings that occupy the site today. </p>`,
             'audioFile': './assets/audio/Marker3FINAL.mp3',
             'mapMarker': './assets/markers/marker3.png',
             'pano360': './assets/360/SAM_100_1149.jpg',
@@ -138,7 +138,7 @@ const features = [
             'title': 'Four', 
             'description': `
                 <strong>walking/Promenading</strong><p>
-                From what was once the back left corner of the Mecca, we consider Garnette Cadogan's "Walking While Black" along balconies and sidewalks. <p>“So I walk caught between memory and forgetting, between memory and forgiveness.”</p></p>`,
+                Taking a step outside of the Mecca, we consider the right to the city as the Mecca's block began to change. Garnette Cadogan's "Walking While Black" features. <p>“So I walk caught between memory and forgetting, between memory and forgiveness.”</p></p>`,
             'audioFile': './assets/audio/Marker4FINAL.mp3',
             'mapMarker': './assets/markers/marker4.png',
             'pano360': './assets/360/SAM_100_1151.jpg',
