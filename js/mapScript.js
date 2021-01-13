@@ -178,7 +178,7 @@ const features = [
             'description': `
                 <strong>Let's Discuss</strong><p>
                 <p>1. What other sites like the Mecca are you familiar with? What used to be there, and what is at the site now? </p> 
-                <p>2. If you could design an exhibition on the objects found from the Mecca, how would you disply them? What kinds of information would you include with the objects? </p>
+                <p>2. If you could design an exhibition on the objects found from the Mecca, how would you display them? What kinds of information would you include with the objects? </p>
                 <p>3. How does it feel to observe and be observed in the city? When are you most aware of either? </P>
                 <p>4. What other parts of the Mecca's history are still present with us today? </p>`,
             // 'audioFile': './assets/audio/sample.mp3',
