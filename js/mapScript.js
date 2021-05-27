@@ -11,7 +11,7 @@ var map = new mapboxgl.Map({
 const entries= {
     object1: {
         name: "Asprin Pills",
-        img:"/assets/img/Mecca Flats Photos, R. Graff/Aspirin_pills_MeccaFlats.jpg",
+        img:"../assets/img/Aspirin_pills_MeccaFlats.jpg",
         altText:"Asprin Pills",
         shortDescription: "",
         longDescription: "", 
@@ -22,7 +22,7 @@ const entries= {
 
     object2: {
         name:"Asprin Bottle",
-        img:"/assets/img/Mecca Flats Photos, R. Graff/Aspirinbottle1_MeccaFlats.jpg",
+        img:"../assets/img/Aspirinbottle1_MeccaFlats.jpg",
         shortDescription: "",
         longDescription: "",
         audio:"",
@@ -32,7 +32,7 @@ const entries= {
 
     object3: {
         name:"Bennington Marble",
-        img:"/assets/img/Mecca Flats Photos, R. Graff/BenningtonMarble_MeccaFlats.jpg",
+        img:"../assets/img/BenningtonMarble_MeccaFlats.jpg",
         shortDescription: "",
         longDescription: "",
         audio:"",
@@ -42,7 +42,7 @@ const entries= {
 
     object4: {
         name:"Glass Marbles",
-        img:"/assets/img/Mecca Flats Photos, R. Graff/glassmarbles_MeccaFlats.jpg",
+        img:"../assets/img/glassmarbles_MeccaFlats.jpg",
         shortDescription: "",
         longDescription: "",
         audio:"",
@@ -52,7 +52,7 @@ const entries= {
 
     object5: {
         name:"Bottle",
-        img:"/assets/img/Mecca Flats Photos, R. Graff/Bottle_IIT.JPG",
+        img:"../assets/img/Bottle_IIT.JPG",
         shortDescription: "",
         longDescription: "",
         audio:"",
@@ -62,7 +62,7 @@ const entries= {
 
     object6: {
         name:"Marble, Ceramic Shard, and Pipe Stem",
-        img:"/assets/img/Mecca Flats Photos, R. Graff/Pipestem_Marble_ceramic_IIT.JPG",
+        img:"../assets/img/Pipestem_Marble_ceramic_IIT.JPG",
         shortDescription: "",
         longDescription: "",
         audio:"",
