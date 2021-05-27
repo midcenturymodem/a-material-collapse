@@ -1,4 +1,4 @@
-const entries= {
+export const entries= {
     object1: {
         name: "Asprin Pills",
         img:"/assets/img/Mecca Flats Photos, R. Graff/Aspirin_pills_MeccaFlats.jpg",

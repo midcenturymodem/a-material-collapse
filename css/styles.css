@@ -10215,3 +10215,15 @@ img.sideBySideImg {
   margin-top: 7px;
 
 }
+
+.hidden {
+  display:none !important;
+}
+
+#objectModal .modal-content {
+  padding:20px;
+}
+
+#objectModal img {
+  width:100%;
+}
