@@ -10197,3 +10197,21 @@ img.sideBySideImg {
 .text-white-75 {
   color: rgba(255, 255, 255, 0.75);
 }
+
+.catalog-entry {
+  margin-top: 20px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid lightgray;
+}
+
+.catalog-entry img, .catalog-entry figure {
+  width:100%;
+}
+
+.catalog-entry figcaption {
+  font-size: x-small;
+  margin-top: 7px;
+
+}
