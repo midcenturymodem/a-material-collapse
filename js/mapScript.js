@@ -8,6 +8,58 @@ var map = new mapboxgl.Map({
     zoom: 17.521500097254677 // starting zoom
 });
 
+const entries= {
+    object1: {
+        name: "Asprin Pills",
+        img:"/assets/img/Mecca Flats Photos, R. Graff/Aspirin_pills_MeccaFlats.jpg",
+        altText:"Asprin Pills",
+        shortDescription: "",
+        longDescription: "", 
+        audio: "",
+    },
+
+    object2: {
+        name:"Asprin Bottle",
+        img:"/assets/img/Mecca Flats Photos, R. Graff/Aspirinbottle1_MeccaFlats.jpg",
+        shortDescription: "",
+        longDescription: "",
+        audio:"",
+    },
+
+    object3: {
+        name:"Bennington Marble",
+        img:"/assets/img/Mecca Flats Photos, R. Graff/BenningtonMarble_MeccaFlats.jpg",
+        shortDescription: "",
+        longDescription: "",
+        audio:"",
+    },
+
+    object4: {
+        name:"Glass Marbles",
+        img:"/assets/img/Mecca Flats Photos, R. Graff/glassmarbles_MeccaFlats.jpg",
+        shortDescription: "",
+        longDescription: "",
+        audio:"",
+    },
+
+    object5: {
+        name:"Bottle",
+        img:"/assets/img/Mecca Flats Photos, R. Graff/Bottle_IIT.JPG",
+        shortDescription: "",
+        longDescription: "",
+        audio:"",
+    }, 
+
+    object6: {
+        name:"Marble, Ceramic Shard, and Pipe Stem",
+        img:"/assets/img/Mecca Flats Photos, R. Graff/Pipestem_Marble_ceramic_IIT.JPG",
+        shortDescription: "",
+        longDescription: "",
+        audio:"",
+    }, 
+    
+}
+
 const features = [
     // start of feature
     {   // boiler plate for each feature
@@ -215,7 +267,7 @@ const features = [
         'geometry': { 
             'type': 'Point',
             'coordinates': [-87.627292, 41.8334420]
-        }
+        },
     },
     // start of feature
     { 'type': 'Feature',
@@ -331,6 +383,31 @@ const features = [
             'coordinates': [-87.626968, 41.834259]
         }
     },
+    {'type': 'Feature',
+        'properties': {
+            'type': 'ojects',
+            'title': 'Objects', 
+            'description': `
+                <strong>Mecca Objects</strong>
+            `,
+            'mapMarker': './assets/markers/marker5.png',
+            'pano360': './assets/360/SAM_100_1136.jpg',
+            'hotSpots': Object.keys(entries).map(entry => {
+                return {
+                    'pitch': Math.random()*100,
+                    'yaw': Math.random()*100,
+                    // 'class':'img-class',
+                    'text':entries[entry].shortDescription||'test',
+                    // 'clickHandlerFunc': console.log,
+                    // 'clickHandlerArgs': entry
+                }
+            })
+        },
+        'geometry': { 
+            'type': 'Point',
+            'coordinates': [-87.6276847935638, 41.833216001080984]
+        }
+    }
 ]
 
 const bufferedFeatures = features.map(i => turf.circle(turf.point(i.geometry.coordinates), 20, {units: 'feet'}))
@@ -360,7 +437,7 @@ function checkProximity(coords){
                         * to figure out where to place hot spots. Always remove it when
                         * finished, though.
                         */
-                        // "hotSpotDebug": true,
+                        "hotSpotDebug": true,
                         "hotSpots": features[i].properties.hotSpots
                     });
                     setTimeout(() => {
