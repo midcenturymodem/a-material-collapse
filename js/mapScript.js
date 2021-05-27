@@ -60,6 +60,24 @@ const entries= {
     
 }
 
+function showModal(entry){
+    console.log(entry)
+    document.getElementById('objectModalLabel').innerHTML = entries[entry].name;
+    document.getElementById('objectModalBody').innerHTML = entries[entry].longDescription;
+    document.getElementById('objectModalImg').src = entries[entry].img;
+    document.getElementById('objectModalImg').alt = entries[entry].altText;
+
+    if (entries[entry].audio != undefined) {
+        document.getElementById('objectModalAudio').classList.remove('hidden');
+        document.getElementById('objectModalAudioSource').src = entries[entry].audio
+    } else {
+        document.getElementById('objectModalAudio').classList.add('hidden');
+    }
+    
+    $('#objectModal').modal()
+
+}
+
 const features = [
     // start of feature
     {   // boiler plate for each feature
@@ -397,9 +415,8 @@ const features = [
                     'pitch': Math.random()*100,
                     'yaw': Math.random()*100,
                     // 'class':'img-class',
-                    'text':entries[entry].shortDescription||'test',
-                    // 'clickHandlerFunc': console.log,
-                    // 'clickHandlerArgs': entry
+                    text:entries[entry].shortDescription||'test',
+                    clickHandlerFunc: () => showModal(entry)
                 }
             })
         },
@@ -437,7 +454,7 @@ function checkProximity(coords){
                         * to figure out where to place hot spots. Always remove it when
                         * finished, though.
                         */
-                        "hotSpotDebug": true,
+                        // "hotSpotDebug": true,
                         "hotSpots": features[i].properties.hotSpots
                     });
                     setTimeout(() => {

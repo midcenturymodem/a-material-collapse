@@ -65,8 +65,38 @@
                 </div>
             </div>
         </section>
+        <!-- 360 Viewer -->
         <div id="photo-viewer"></div>
+        <!-- Map -->
         <div id="map"></div>
+        <!-- Object Modal -->
+        <div class="modal fade" id="objectModal" tabindex="-1" role="dialog" aria-labelledby="objectModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="objectModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    
+                    <figure>
+                        <img id="objectModalImg">
+                        <figcaption> Photograph by Rebecca Graff, Mecca Flats Archaeological Salvage Project (2018), Lake Forest College/Digital Chicago. </figcaption>
+                    </figure> 
+                    <audio controls id="objectModalAudio">
+                        <source src="horse.mp3" type="audio/mpeg" id="objectModalAudioSource">
+                    Your browser does not support the audio element.
+                    </audio>
+                    <div id="objectModalBody">
+                    ...
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <button onclick="returnToMap()" id="return-to-map">×</button>
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
