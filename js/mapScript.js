@@ -16,6 +16,8 @@ const entries= {
         shortDescription: "",
         longDescription: "", 
         audio: "",
+        pitch: -14.96027049107076,
+        yaw: 21.386523681128693,
     },
 
     object2: {
@@ -24,6 +26,8 @@ const entries= {
         shortDescription: "",
         longDescription: "",
         audio:"",
+        pitch:-10.577296384280311,
+        yaw:36.147838723757154,
     },
 
     object3: {
@@ -32,6 +36,8 @@ const entries= {
         shortDescription: "",
         longDescription: "",
         audio:"",
+        pitch:-9.2291202615514,
+        yaw: -28.423970429826,
     },
 
     object4: {
@@ -40,6 +46,8 @@ const entries= {
         shortDescription: "",
         longDescription: "",
         audio:"",
+        pitch:-10.028825898675857,
+        yaw: 57.963973289861194,
     },
 
     object5: {
@@ -48,6 +56,8 @@ const entries= {
         shortDescription: "",
         longDescription: "",
         audio:"",
+        pitch:-8.605180833528511,
+        yaw: 7.391815774994502,
     }, 
 
     object6: {
@@ -56,6 +66,8 @@ const entries= {
         shortDescription: "",
         longDescription: "",
         audio:"",
+        pitch:-22.805189607627263,
+        yaw:  29.48618657545598,
     }, 
     
 }
@@ -408,14 +420,14 @@ const features = [
             'description': `
                 <strong>Mecca Objects</strong>
             `,
-            'mapMarker': './assets/markers/marker5.png',
-            'pano360': './assets/360/SAM_100_1136.jpg',
+            'mapMarker': './assets/markers/artifact.png',
+            'pano360': './assets/360/SAM_100_1146.jpg',
             'hotSpots': Object.keys(entries).map(entry => {
                 return {
-                    'pitch': Math.random()*100,
-                    'yaw': Math.random()*100,
-                    // 'class':'img-class',
-                    text:entries[entry].shortDescription||'test',
+                    'pitch': entries[entry].pitch,
+                    'yaw': entries[entry].yaw,
+                    "cssClass": "custom-hotspot",
+                    text:entries[entry].name + ": "+ entries[entry].shortDescription,
                     clickHandlerFunc: () => showModal(entry)
                 }
             })
@@ -454,7 +466,7 @@ function checkProximity(coords){
                         * to figure out where to place hot spots. Always remove it when
                         * finished, though.
                         */
-                        // "hotSpotDebug": true,
+                        "hotSpotDebug": true,
                         "hotSpots": features[i].properties.hotSpots
                     });
                     setTimeout(() => {

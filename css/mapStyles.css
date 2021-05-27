@@ -65,3 +65,10 @@
     opacity:1;
     pointer-events: all;
 }
+
+.custom-hotspot {
+    width: 30px;
+    height: 30px;
+    background: url("../assets/markers/artifact_icon.png");
+    background-size: contain;
+}
