@@ -44,7 +44,7 @@ const entries= {
         name:"Marble, Ceramic Shard, and Pipe Stem",
         img:"/assets/img/Mecca Flats Photos, R. Graff/Pipestem_Marble_ceramic_IIT.JPG",
         shortDescription: "",
-        longDescription: "<p>Aunt Dill</p><p>has bits of brass and marble, and Franciscan</p>",
+        longDescription: "",
         audio:"",
     }, 
     
