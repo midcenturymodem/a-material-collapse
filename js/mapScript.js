@@ -466,7 +466,7 @@ function checkProximity(coords){
                         * to figure out where to place hot spots. Always remove it when
                         * finished, though.
                         */
-                        "hotSpotDebug": true,
+                        // "hotSpotDebug": true,
                         "hotSpots": features[i].properties.hotSpots
                     });
                     setTimeout(() => {
@@ -486,6 +486,7 @@ function checkProximity(coords){
 function returnToMap(){
     mapActive = true;
     document.querySelector("#photo-viewer").classList -= ' active'
+    document.querySelector("#photo-viewer").innerHTML = ''
     document.querySelector("#map-content").classList -= ' active'
     document.querySelector("#return-to-map").classList -= ' active'
 
