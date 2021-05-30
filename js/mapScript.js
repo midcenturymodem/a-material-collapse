@@ -485,7 +485,7 @@ function checkProximity(coords){
 
 function returnToMap(){
     mapActive = true;
-    document.querySelector("#photo-viewer").classList -= ' active'
+    document.querySelector("#photo-viewer").classList -= ' active' //# means CSS ID (only one of each ID)
     document.querySelector("#photo-viewer").innerHTML = ''
     document.querySelector("#map-content").classList -= ' active'
     document.querySelector("#return-to-map").classList -= ' active'

@@ -50,19 +50,18 @@ const entries= {
     
 }
 function loadEntries(){
-    let templateCopy;
-
-    const entryTemplate = document.querySelector("template");
-    const entryContainer= document.querySelector(".entriescontainer");
-
-    for (const entry in entries) {
-        templateCopy = entryTemplate.content.cloneNode(true); 
-        templateCopy.querySelector('h3').innerHTML = entries[entry].name
-        templateCopy.querySelector('img').src = entries[entry].img
-        templateCopy.querySelector('img').alt = entries[entry].altText
-        templateCopy.querySelector('p').innerHTML = entries[entry].longDescription
-        if (entries[entry].audio !=undefined) {
-            templateCopy.querySelector('source').src = entries[entry].audio
+    const entryTemplate = document.querySelector("template"); // template is a html tag
+    const entryContainer= document.querySelector(".entriescontainer"); // .entriescontainer is a css class
+    
+    for (const object in entries) { //js "for" loop -- there are many different types of syntax for js "for" loops, this one is specific for objects. In js, defining "objects" and "entries" as you call it, while also attaching the earlier "entries" a the top to it. 
+        //within curly braces, only applies to the world within those curly braces. 
+        let templateCopy = entryTemplate.content.cloneNode(true); 
+        templateCopy.querySelector('h3').innerHTML = entries[object].name
+        templateCopy.querySelector('img').src = entries[object].img
+        templateCopy.querySelector('img').alt = entries[object].altText
+        templateCopy.querySelector('p').innerHTML = entries[object].longDescription
+        if (entries[object].audio !=undefined) {
+            templateCopy.querySelector('source').src = entries[object].audio
         } else {
             templateCopy.querySelector('audio').remove()
         }
