@@ -72,6 +72,11 @@ const entries= {
     
 }
 
+var randomProperty = function (obj) {
+    var keys = Object.keys(obj);
+    return keys[ keys.length * Math.random() << 0];
+};
+
 function showModal(entry){
     console.log(entry)
     document.getElementById('objectModalLabel').innerHTML = entries[entry].name;
@@ -422,15 +427,13 @@ const features = [
             `,
             'mapMarker': './assets/markers/artifact.png',
             'pano360': './assets/360/SAM_100_1146.jpg',
-            'hotSpots': Object.keys(entries).map(entry => {
-                return {
-                    'pitch': entries[entry].pitch,
-                    'yaw': entries[entry].yaw,
+            'hotSpots': [{
+                    'pitch': -14.96027049107076,
+                    'yaw': 21.386523681128693,
                     "cssClass": "custom-hotspot",
-                    text:entries[entry].name + ": "+ entries[entry].shortDescription,
-                    clickHandlerFunc: () => showModal(entry)
-                }
-            })
+                    text:"Discover Artifacts",
+                    clickHandlerFunc: () => showModal(randomProperty(entries))
+                }]
         },
         'geometry': { 
             'type': 'Point',
