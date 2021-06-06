@@ -84,12 +84,12 @@ function showModal(entry){
     document.getElementById('objectModalImg').src = entries[entry].img;
     document.getElementById('objectModalImg').alt = entries[entry].altText;
 
-    if (entries[entry].audio != undefined) {
-        document.getElementById('objectModalAudio').classList.remove('hidden');
-        document.getElementById('objectModalAudioSource').src = entries[entry].audio
-    } else {
-        document.getElementById('objectModalAudio').classList.add('hidden');
-    }
+    // if (entries[entry].audio != undefined) {
+    //     document.getElementById('objectModalAudio').classList.remove('hidden');
+    //     document.getElementById('objectModalAudioSource').src = entries[entry].audio
+    // } else {
+    //     document.getElementById('objectModalAudio').classList.add('hidden');
+    // }
     
     $('#objectModal').modal()
 
