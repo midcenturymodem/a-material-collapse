@@ -1,0 +1,19 @@
+.submission-cta {
+    text-align:left;
+    width:100%;
+}
+
+.submission-cta a {
+    color:red;
+}
+
+.community-pinboard {
+    column-count: 2;
+    column-gap: 10px;
+    border-left:1px solid #d2d2ff;
+    padding-left:20px;
+}
+
+.image-tile {
+    break-inside: avoid;
+}

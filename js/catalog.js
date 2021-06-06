@@ -71,37 +71,30 @@ function loadEntries(){
 
 function loadObject(queryString){
     const urlParams = new URLSearchParams(queryString);
+    const container = document.querySelector('.entriescontainer');
     let currentObj;
 
     if (urlParams.get('id')) {
         currentObj = urlParams.get('id')
+        document.getElementById("objects").value = currentObj
     } else if (entries.hasOwnProperty(queryString)) {
         currentObj = queryString;
     } else {
+        window.history.pushState('page', 'Material Collapse Objects', '/object');
+        container.classList.add('hidden')
         return;
     }
+    container.classList.remove("hidden");
+    container.querySelector('h3').innerHTML = entries[currentObj].name
+    container.querySelector('img').src = entries[currentObj].img
+    container.querySelector('img').alt = entries[currentObj].altText
 
-    // const placeholder = document.getElementById("placeholder-text");
-    // placeholder.remove()
-
-    // document.getElementById('object-title').innerHTML = entries[currentObj].name;
-    // document.getElementById('object-description').innerHTML = entries[currentObj].longDescription;
-    // document.getElementById('object-image').src = entries[currentObj].img;
-    // document.getElementById('object-image').alt = entries[currentObj].altText;
-
-    // if (entries[currentObj].audio != undefined) {
-    //     document.getElementById('object-audio').classList.remove('hidden');
-    //     document.getElementById('object-audio-source').src = entries[currentObj].audio
-    // } else {
-    //     document.getElementById('object-audio').classList.add('hidden');
-    // }
-
-    window.history.pushState('page', 'Material Collapse Objects:' + entries[currentObj].name, '/objects?id=' + currentObj);
+    window.history.pushState('page', 'Material Collapse Objects:' + entries[currentObj].name, '/object?id=' + currentObj);
 
 }
 
 function loadObjectList(){
-    const select = document.getElementById("object-select");
+    const select = document.getElementById("objects");
     
     for (const object in entries){
         let option = document.createElement("option");
@@ -109,4 +102,14 @@ function loadObjectList(){
         option.value = object;
         select.appendChild(option);
     }
+}
+
+var sheetEntries = [];
+
+async function getGoogleSheet(){
+    const data =  await axios.get('google sheet').then(r => r.data.feed.entry)
+	console.log(data)
+    let entries = [];
+    for (let i = 0; i < data.length-1; i++) {
+    };
 }
