@@ -107,7 +107,7 @@ function loadObjectList(){
 var sheetEntries = [];
 
 async function getGoogleSheet(){
-    const data =  await axios.get('google sheet').then(r => r.data.feed.entry)
+    const data =  await axios.get('https://spreadsheets.google.com/feeds/cells/1letK0rJmd4j5ZmStmP7424LAaNX9Ul2fVvFGspaBZOo/1/public/full?alt=json').then(r => r.data.feed.entry)
 	console.log(data)
     let entries = [];
     for (let i = 0; i < data.length-1; i++) {
