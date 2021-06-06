@@ -68,3 +68,45 @@ function loadEntries(){
         entryContainer.appendChild(templateCopy)
     }
 }
+
+function loadObject(queryString){
+    const urlParams = new URLSearchParams(queryString);
+    let currentObj;
+
+    if (urlParams.get('id')) {
+        currentObj = urlParams.get('id')
+    } else if (entries.hasOwnProperty(queryString)) {
+        currentObj = queryString;
+    } else {
+        return;
+    }
+
+    // const placeholder = document.getElementById("placeholder-text");
+    // placeholder.remove()
+
+    // document.getElementById('object-title').innerHTML = entries[currentObj].name;
+    // document.getElementById('object-description').innerHTML = entries[currentObj].longDescription;
+    // document.getElementById('object-image').src = entries[currentObj].img;
+    // document.getElementById('object-image').alt = entries[currentObj].altText;
+
+    // if (entries[currentObj].audio != undefined) {
+    //     document.getElementById('object-audio').classList.remove('hidden');
+    //     document.getElementById('object-audio-source').src = entries[currentObj].audio
+    // } else {
+    //     document.getElementById('object-audio').classList.add('hidden');
+    // }
+
+    window.history.pushState('page', 'Material Collapse Objects:' + entries[currentObj].name, '/objects?id=' + currentObj);
+
+}
+
+function loadObjectList(){
+    const select = document.getElementById("object-select");
+    
+    for (const object in entries){
+        let option = document.createElement("option");
+        option.text = entries[object].name;
+        option.value = object;
+        select.appendChild(option);
+    }
+}
