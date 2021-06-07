@@ -12,7 +12,7 @@ const entries= {
         name:"Asprin Bottle",
         img:"./assets/img/Aspirinbottle1_MeccaFlats.jpg",
         shortDescription: "",
-        longDescription: "",
+        longDescription: "<p>Hear from Dr. Rebecca Graff on some of the artifacts collected from the Mecca.</p>“All about are the cold places,</br>all about are the pushmen and jeopardy, theft— </br>all about are the stormers and scramblers but </br>what must our Season be, which starts form Fear? <br>Live and go out. </br>Define and </br>Medicate the whirlwind.” <p><i> The Second Sermon on the Warpland For Walter Bradford,</i> Gwendolyn Brooks</p>",
         audio:"",
     },
 
@@ -20,7 +20,7 @@ const entries= {
         name:"Bennington Marble",
         img:"./assets/img/BenningtonMarble_MeccaFlats.jpg",
         shortDescription: "",
-        longDescription: "",
+        longDescription: "<p>Hear from Dr. Rebecca Graff on some of the artifacts collected from the Mecca.</p>“Aunt Dill </br> has bits of brass and marble, and Franciscan </br>China; has crocheted doilies; has old mahogany, </br>polished till it burns with a smothered glow; has </br>antimacassars, spreads, silk draperies, </br>her silver creamer and her iron lamp, </br>her piece of porcelain, her seventeen </br>Really Nice handkerchiefs pressed in cedar.” <p>Lines 767-775, <i>In the Mecca</i>, Gwendolyn Brooks</p>",
         audio:"",
     },
 
@@ -44,7 +44,7 @@ const entries= {
         name:"Marble, Ceramic Shard, and Pipe Stem",
         img:"./assets/img/Pipestem_Marble_ceramic_IIT.JPG",
         shortDescription: "",
-        longDescription: "",
+        longDescription: "<p>Hear from Dr. Rebecca Graff on some of the artifacts collected from the Mecca.</p>“There is no need to visit in Blue Island. </br>Prophet will give you trading stamps and kisses, </br>or a cigar. </br>One visit will convince you. </br>Lucky days </br>And Lucky Hands.” <p>Lines 589-595, <i>In the Mecca,</i> Gwendolyn Brooks",
         audio:"",
     }, 
     
