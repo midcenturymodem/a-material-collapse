@@ -105,26 +105,31 @@ function loadObjectList(){
 }
 
 var sheetEntries = [];
+var googleSheetURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSk717bCwVPIw_ayYzv6OS_b1Fw-6RBmhk8kpQq_2CGyy3BNJXnrr5xtBQ7fdLxv9RWimJ67_Y0Sgcq/pub?output=csv'
 
 async function getGoogleSheet(){
-d3.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSk717bCwVPIw_ayYzv6OS_b1Fw-6RBmhk8kpQq_2CGyy3BNJXnrr5xtBQ7fdLxv9RWimJ67_Y0Sgcq/pub?output=csv", function(data) {
-   sheetEntries.push(data);
-});
+    d3.csv(googleSheetURL, data => {
+        sheetEntries.push(data)
+    }).then(data => {
+        loadCommunityImages(sheetEntries, entries[document.getElementById('objects').value].name)
+    })
 }
 
-function $match(item){ return item.Artifact === this}
 function loadCommunityImages(sheetEntries, name){
-    let filteredList = sheetEntries.filter($match, name)
-    
     let container = document.querySelector('.community-pinboard');
     let template = container.querySelector('template');
     
-    for (let i=0; i<filteredList.length;i++){
-      let templateCopy = template.content.cloneNode(true); 
-      templateCopy.querySelector('figcaption').innerHTML = filteredList[i].Name
-    //   templateCopy.querySelector('img').src = "./assets/community-pinboard/" + filteredList[i].Image.split("id=")[1] + ".jpg"
-     templateCopy.querySelector('img').src = "./assets/community-pinboard/" + filteredList[i]["Local Image"]
-      container.appendChild(templateCopy)
-    }
+    let previousImages = container.getElementsByClassName('active-img')
+    if (previousImages.length) previousImages.forEach(image => image.remove())
     
-  }
+    for (let i=0; i<sheetEntries.length;i++){
+        if (sheetEntries[i].Artifact == name && sheetEntries[i].LocalImage.length > 0) {
+            let templateCopy = template.content.cloneNode(true); 
+            templateCopy.querySelector('div').classList.add('active-img')
+            templateCopy.querySelector('figcaption').innerHTML = filteredList[i].Name
+            //   templateCopy.querySelector('img').src = "./assets/community-pinboard/" + filteredList[i].Image.split("id=")[1] + ".jpg"
+            templateCopy.querySelector('img').src = "./assets/community-pinboard/" + filteredList[i]["Local Image"]
+            container.appendChild(templateCopy)
+        }
+    }   
+}
