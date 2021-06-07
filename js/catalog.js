@@ -90,7 +90,7 @@ function loadObject(queryString){
     container.querySelector('img').alt = entries[currentObj].altText
 
     window.history.pushState('page', 'Material Collapse Objects:' + entries[currentObj].name, '/object?id=' + currentObj);
-
+    loadCommunityImages(sheetEntries, entries[currentObj].name)
 }
 
 function loadObjectList(){
@@ -107,9 +107,24 @@ function loadObjectList(){
 var sheetEntries = [];
 
 async function getGoogleSheet(){
-    const data =  await axios.get('https://spreadsheets.google.com/feeds/cells/1voExYomUWmH6tEZX31G6QfXksHR2_Vf5zspYUuXf6xA/1/public/full?alt=json').then(r => r.data.feed.entry)
-	console.log(data)
-    let entries = [];
-    for (let i = 0; i < data.length-1; i++) {
-    };
+d3.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSk717bCwVPIw_ayYzv6OS_b1Fw-6RBmhk8kpQq_2CGyy3BNJXnrr5xtBQ7fdLxv9RWimJ67_Y0Sgcq/pub?output=csv", function(data) {
+   sheetEntries.push(data);
+});
 }
+
+function $match(item){ return item.Artifact === this}
+function loadCommunityImages(sheetEntries, name){
+    let filteredList = sheetEntries.filter($match, name)
+    
+    let container = document.querySelector('.community-pinboard');
+    let template = container.querySelector('template');
+    
+    for (let i=0; i<filteredList.length;i++){
+      let templateCopy = template.content.cloneNode(true); 
+      templateCopy.querySelector('figcaption').innerHTML = filteredList[i].Name
+    //   templateCopy.querySelector('img').src = "./assets/community-pinboard/" + filteredList[i].Image.split("id=")[1] + ".jpg"
+     templateCopy.querySelector('img').src = "./assets/community-pinboard/" + filteredList[i]["Local Image"]
+      container.appendChild(templateCopy)
+    }
+    
+  }
