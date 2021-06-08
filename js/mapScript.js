@@ -421,10 +421,11 @@ const features = [
     {'type': 'Feature',
         'properties': {
             'type': 'ojects',
-            'title': 'Objects', 
+            'title': 'Welcome to the Catalog', 
             'description': `
-                <strong>Mecca Objects</strong>
+                <strong>Hear the story of the artifacts recovered from the Mecca</strong>
             `,
+            'audioFile': './assets/audio/Catalog_Audio.mp3',
             'mapMarker': './assets/markers/artifact.png',
             'pano360': './assets/360/SAM_100_1146.jpg',
             'hotSpots': [{
