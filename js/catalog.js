@@ -118,18 +118,29 @@ async function getGoogleSheet(){
 function loadCommunityImages(sheetEntries, name){
     let container = document.querySelector('.community-pinboard');
     let template = container.querySelector('template');
+    let hasNoEntries = true;
     
+    document.querySelector('.fallback-text').classList.add('hidden')
+
     let previousImages = container.getElementsByClassName('active-img')
-    if (previousImages.length) previousImages.forEach(image => image.remove())
+
+    while (previousImages.length > 0) {
+        previousImages[0].remove()
+    }
     
     for (let i=0; i<sheetEntries.length;i++){
-        if (sheetEntries[i].Artifact == name && sheetEntries[i].LocalImage.length > 0) {
+        if (sheetEntries[i].Artifact == name && sheetEntries[i]["Local Image"].length > 0) {
+            hasNoEntries = false;
             let templateCopy = template.content.cloneNode(true); 
             templateCopy.querySelector('div').classList.add('active-img')
-            templateCopy.querySelector('figcaption').innerHTML = filteredList[i].Name
+            templateCopy.querySelector('figcaption').innerHTML = sheetEntries[i].Name
             //   templateCopy.querySelector('img').src = "./assets/community-pinboard/" + filteredList[i].Image.split("id=")[1] + ".jpg"
-            templateCopy.querySelector('img').src = "./assets/community-pinboard/" + filteredList[i]["Local Image"]
+            templateCopy.querySelector('img').src = "./assets/community-pinboard/" + sheetEntries[i]["Local Image"]
             container.appendChild(templateCopy)
         }
     }   
+
+    if (hasNoEntries) {
+        document.querySelector('.fallback-text').classList.remove('hidden')
+    } 
 }
